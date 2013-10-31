@@ -1,0 +1,56 @@
+{% extends ext %}
+{% block texto %}
+{{START}}
+#############################
+#    EXTRATO LEGISLATIVO    #
+#     HACKATHON  CAMARA     #
+#############################
+
+LOCAL: {{data.local}}
+DATA: {{data.dia}}
+
+## PLENARIO
+{% for sessao in data.pautas %}
+#############################
+{{sessao.tipo}}
+{%- if sessao.extra %}
+{{sessao.extra.descricao}}
+{%- endif %}
+{{sessao.horario}} - {{sessao.estado}}
+{%for p in sessao.proposicoes %}
+* {{p.tipo}} {{p.numero}}/{{p.ano}} - {{p.ementa}}
+{% if sessao.extra %}
+{%- if p.quorum_num %}
+Quorum minimo: {{p.quorum}} ({{p.quorum_num}})
+{%- else %}
+Quorum minimo: {{sessao.extra.presenca//2+1}}
+{%- endif %}
+Presenca: {{sessao.extra.presenca}}
+{%- if p.votacoes %}
+{%- for votacao in p.votacoes %}
+Resultado: {{votacao.resumo}}
+{%- if votacao.orientacao %}
+Orientação por bancada:
+{% endif %}
+{%for bancada in votacao.orientacao %}
+{{bancada.sigla}} - {{bancada.orientacao}}
+{%- endfor %}
+{%- endfor %}
+{%- else %}
+{% endif %}
+{%- endif %}
+{%- endfor %}
+{%- if sessao.objeto %}
+{{sessao.objeto}}
+{% endif %}
+{%- endfor %}
+#############################
+
+Algumas considerações:
+< Para ser aprovado, um PL precisa atingir o quórum mínimo de votação >
+< Só há votação de PL's nas sessões Deliberativas, que só acontecem terça, quarta e quinta >
+< Nas ordinárias, solenes e extraordinárias não há votação >
+< As informações sobre aprovação ou veto de cada PL não estão disponíveis neste aplicativo, porque os dados não são suficientes >
+< Por legislatura, são 513 os deputados > 
+{{END}}
+{% endblock %}
