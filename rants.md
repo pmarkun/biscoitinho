@@ -1,13 +1,14 @@
 # Resposta no Form de Inscrição
 
 ## Integrantes
-Pedro Markun;
-Lívia Ascava;
-Capi Etheriel;
-Todos os servidores da TI da Câmara que ajudaram disponibilizar as bases de dados; 
-O Paulo Pimenta e o porteiro da Câmara que me falaram sobre os diferentes tipos de presença;
-O servidor que me explicou sobre os quóruns regimentais e deu a sugestão de nome para o projeto;
-Todos os Hackers e Beta Testers que leram as tirinhas de papel e ajudaram a encontrar inconsistências; 
+* Pedro Markun;
+* Lívia Ascava;
+* Capi Etheriel;
+* Luis Leão;
+* Todos os servidores da TI da Câmara que ajudaram disponibilizar as bases de dados; 
+* O Paulo Pimenta e o porteiro da Câmara que me falaram sobre os diferentes tipos de presença;
+* O servidor que me explicou sobre os quóruns regimentais e deu a sugestão de nome para o projeto;
+* Todos os Hackers e Beta Testers que leram as tirinhas de papel e ajudaram a encontrar inconsistências; 
 
 ## Como foi o processo de produção do projeto durante o Hackathon? 
 Tanta gente participou do processo de criação e aperfeiçoamento desse projeto que não faz muito sentido falar em equipe.
